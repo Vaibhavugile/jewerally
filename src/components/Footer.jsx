@@ -1,11 +1,12 @@
 // src/components/Footer.jsx
 import React from 'react';
+import logo from '../assets/logoj.png'; // your actual logo path
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-section about">
-        <img src="/assets/logo.png" alt="Kiyu Ziyu Logo" className="logo" />
+        <img src={logo} alt="Kiyuziyu Logo" className="logo" />
         <p>We supply anti-tarnish imitation jewellery to wholesalers and resellers in all over India.</p>
         <div className="social-icons">
           <i className="fab fa-instagram" />
@@ -17,8 +18,8 @@ const Footer = () => {
       </div>
       <div className="footer-section contact">
         <h4>Contact Us</h4>
-        <p>📍 Katargam, Surat</p>
-        <p>📞 +91 84603 53146</p>
+        <p>📍 Streets Of Europe Hinjewadi PUNE</p>
+        <p>📞 +91 7897897441</p>
         <p>✉️ Kiyuziyuofficial@gmail.com</p>
       </div>
       <div className="footer-section links">

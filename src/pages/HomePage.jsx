@@ -4,12 +4,18 @@ import HeroSection from '../components/HeroSection';
 import CollectionCard from '../components/CollectionCard';
 import BrowseCollectionSection from '../components/BrowseCollectionSection';
 import Footer from '../components/Footer';
+import earrings from '../assets/ring.jpg';
+import necklaces from '../assets/ring.jpg';
+import bracelets from '../assets/ring.jpg';
+import rings from '../assets/ring.jpg';
+
 const collections = [
-  { title: 'Earrings' },
-  { title: 'Necklaces' },
-  { title: 'Bracelets' },
-  { title: 'Rings' },
+  { title: 'Earrings', image: earrings },
+  { title: 'Necklaces', image: necklaces },
+  { title: 'Bracelets', image: bracelets },
+  { title: 'Rings', image: rings },
 ];
+
 
 const HomePage = () => {
   return (

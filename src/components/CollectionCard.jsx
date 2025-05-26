@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CollectionCard = ({ title }) => {
+const CollectionCard = ({ title, image }) => {
   return (
     <div className="collection-card">
-      <div className="img-placeholder"></div>
+      <img src={image} alt={title} className="collection-image" />
       <div className="title">{title}</div>
     </div>
   );

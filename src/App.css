@@ -19,58 +19,89 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1.2rem 2rem;
   background-color: var(--white);
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
   z-index: 999;
+  position: relative;
 }
 
-.navbar h1 {
+/* Left */
+.navbar-left {
+  flex: 1;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+/* Center */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-title {
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--primary-color);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 1.8rem;
-  padding: 0;
   margin: 0;
 }
 
-.navbar li a {
+/* Right */
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right li a {
   color: var(--nav-text-color);
   font-size: 1rem;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.navbar li a:hover {
+.navbar-right li a:hover {
   color: var(--primary-color);
 }
 
+
 /* Hero Section */
 .hero {
-  height: 90vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  transition: background-image 1s ease-in-out;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .hero-overlay {
-  background-color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 2;
   padding: 2rem 3rem;
   text-align: center;
   border-radius: 10px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .hero h2 {
@@ -121,35 +152,31 @@ body {
 /* Collection card */
 .collection-card {
   border: 1px solid #eee;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
 .collection-card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
 }
 
-.collection-card .img-placeholder {
+.collection-image {
   width: 100%;
-  height: 250px;
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: #888;
+  height: 220px;
+  object-fit: cover;
 }
 
-.collection-card .title {
-  padding: 1.2rem;
-  font-weight: bold;
-  font-size: 1.1rem;
+.title {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
 }
+
 /* src/components/BrowseCollectionSection.css */
 
 .browse-section {
@@ -269,4 +296,105 @@ body {
 .footer-section ul li:hover {
   color: #e84a7a;
 }
+
+
+/* ------------------------------
+   Responsive Styles for Mobile
+---------------------------------*/
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .navbar-center {
+    display: none; /* Hide side links on mobile (optional) */
+  }
+
+  .navbar-title {
+    position: static;
+    transform: none;
+    font-size: 1.4rem;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-overlay {
+    padding: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.4rem;
+  }
+
+  /* Collections Section */
+  .collections-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Browse Collection Section */
+  .browse-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .browse-section .content,
+  .browse-section .image {
+    max-width: 100%;
+  }
+
+  .browse-section .title {
+    font-size: 2rem;
+  }
+
+  .browse-section .subtitle {
+    font-size: 1rem;
+  }
+
+  .browse-section .browse-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+  }
+
+  .footer-section p,
+  .footer-section ul {
+    font-size: 14px;
+  }
+}
+
 

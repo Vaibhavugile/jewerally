@@ -1,6 +1,6 @@
 // src/components/BrowseCollectionSection.jsx
 import React from 'react';
-import collecionimg from '../assets/hero1.jpg';
+import collecionimg from '../assets/collectionimg.jpg';
 const BrowseCollectionSection = () => {
   return (
     <section className="browse-section">
