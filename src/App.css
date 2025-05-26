@@ -1,0 +1,272 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #ec4c79; /* brand pink */
+  --text-color: #222;
+  --light-gray: #f8f8f8;
+  --white: #ffffff;
+  --nav-text-color: #666666;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: var(--white);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li a {
+  color: var(--nav-text-color);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar li a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2rem 3rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero button:hover {
+  background-color: #c33b63;
+}
+
+
+/* Collections Section */
+.collections-section {
+  padding: 5rem 2rem 4rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.collections-section h3 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+.collections-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Collection card */
+.collection-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.collection-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.collection-card .img-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #888;
+}
+
+.collection-card .title {
+  padding: 1.2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+/* src/components/BrowseCollectionSection.css */
+
+.browse-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background: #f5f0f2;
+}
+
+.browse-section .content {
+  max-width: 50%;
+}
+
+.browse-section .title {
+  font-size: 56px;
+  color: #d14f7d;
+  margin-bottom: 20px;
+}
+
+.browse-section .subtitle {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.browse-section .browse-btn {
+  background: #e84a7a;
+  color: white;
+  padding: 14px 40px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.browse-section .browse-btn:hover {
+  background: #c43d63;
+}
+
+.browse-section .image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+/* src/components/Footer.css */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background-color: #fff;
+  color: #333;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-section.about .logo {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.footer-section.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-section.about .social-icons i {
+  margin-right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-section.about .social-icons i:hover {
+  color: #e84a7a;
+}
+
+.footer-section h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-section h4::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #e84a7a;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li:hover {
+  color: #e84a7a;
+}
+
