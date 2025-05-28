@@ -1,13 +1,14 @@
+// HomePage.jsx
 import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import CollectionCard from '../components/CollectionCard';
 import BrowseCollectionSection from '../components/BrowseCollectionSection';
 import Footer from '../components/Footer';
-import earrings from '../assets/ring.jpg';
-import necklaces from '../assets/ring.jpg';
-import bracelets from '../assets/ring.jpg';
-import rings from '../assets/ring.jpg';
+import earrings from '../assets/earing.jpeg';
+import necklaces from '../assets/necklace.jpeg';
+import bracelets from '../assets/bracelate.jpeg';
+import rings from '../assets/ring1.jpeg';
 
 const collections = [
   { title: 'Earrings', image: earrings },
@@ -15,7 +16,6 @@ const collections = [
   { title: 'Bracelets', image: bracelets },
   { title: 'Rings', image: rings },
 ];
-
 
 const HomePage = () => {
   return (
@@ -26,13 +26,12 @@ const HomePage = () => {
         <h3>Featured Collections</h3>
         <div className="collections-grid">
           {collections.map((item, idx) => (
-            <CollectionCard key={idx} title={item.title} />
+            <CollectionCard key={idx} title={item.title} image={item.image} />
           ))}
         </div>
       </div>
-       <BrowseCollectionSection /> {/* New Section */}
-      <Footer /> 
-
+      <BrowseCollectionSection />
+      <Footer />
     </>
   );
 };

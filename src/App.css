@@ -1,6 +1,8 @@
 /* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 :root {
   --primary-color: #ec4c79; /* brand pink */
   --text-color: #222;
@@ -255,6 +257,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s ease;
+  
 }
 
 .footer-section.about .social-icons i:hover {
